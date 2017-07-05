@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>数据网格</title>
+	<!--引用jquery -->
+	<script type="text/javascript" src="../jquery.min.js"></script>
+	<!--引用jeasyui -->
+	<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+	<!-- 引入EasyUI的中文国际化js，让EasyUI支持中文 -->
+	<script type="text/javascript" src="../locale/easyui-lang-zh_CN.js"></script>
+	<!-- 引入EasyUI的样式文件-->
+	<link rel="stylesheet" href="../themes/default/easyui.css"/>
+	<!-- 引入EasyUI的图标样式文件-->
+	<link rel="stylesheet" type="text/css" href="../themes/icon.css"/>
+	<!-- 样式重置 -->
+	<link rel="stylesheet" type="text/css" href="reset.css" />
+
+</head>
+<body>
+	<!--
+    	作者：bochengren@163.com
+    	时间：2017-06-20
+    	描述：
+    -->
+    <!--<table class="easyui-datagrid">
+    	<thead>
+    		<tr>
+    			<th data-options="field:'code'">code</th>
+    			<th data-options="field:'name'">name</th>
+    			<th data-options="field:'price'">price</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td>001</td>
+    			<td>name1</td>
+    			<td>2323</td>
+    		</tr>
+    		<tr>
+    			<td>002</td>
+    			<td>name2</td>
+    			<td>4612</td>
+    		</tr>
+    	</tbody>
+    	</table>-->
+    	<table class="easyui-datagrid" title="个人信息"  style="width:500px;height: 250px;" pagination="true" toolbar='#toolbar'	
+			data-options="singleSelect:true,collapsible:true,url:'datagridtest.json',method:'get'"  rownumbers="true" striped='true' pageNumber='1' pageSize="10" pageList='[10,20,50]'>
+    		<thead>
+    			<tr>
+    				<th data-options="field:'firstname',width:100,align:'center'">firstName</th>
+    				<th data-options="field:'lastname',width:100,align:'center'">lastName</th>
+    				<th data-options="field:'phone',width:100,align:'center'">phone</th>
+    				<th data-options="field:'email',width:150,align:'center'">email</th>
+    			</tr>
+    		</thead>
+    	
+    </table>
+    <div id="toolbar">
+    	<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newItem()">新增</a>
+    	<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="removeItem()">删除</a>
+    	<a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="saveItem()">保存</a>
+    	<a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="undoItem()">取消</a>
+    </div>
+</body>
+</html>
